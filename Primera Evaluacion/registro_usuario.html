@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <style>
+
+        body {
+            background-image: url('img/marco-vegetacion-verde-acuarela_53876-105303.avif'); 
+            background-size: cover;                
+            background-position: center;           
+            background-repeat: no-repeat;          
+            height: 100vh;                         
+            margin: 0;
+            }
+        .formulario{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 600px;
+            height: 700px;
+            background-color: #E7E7D7;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+        .formulario h1{
+            text-align: center;
+            padding: 0 0 20px 0;
+            border-bottom: 1px solid #CEC7A0;
+        }
+        .formulario form{
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+        form .user{
+            position: relative;
+            border-bottom: 2px solid #adadad;
+            margin: 30px 0;
+
+        }
+        .user input{
+            width: 100%;
+            padding: 0 5px;
+            height: 50px;
+            font-size: 16px;
+            border: none;
+            background: none;
+            outline: none;
+        }
+        .user label{
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            color: #adadad;
+            transform: translateY(-50%);
+            font-size: 16px;
+            pointer-events: none;
+        }
+
+        .user span::before{
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: black;
+        }
+
+        .user input:focus ~ label,
+        .user input:focus ~ label{
+            top: -5px;
+            color: black;
+        }
+
+        .user input:focus ~ span::before,
+        .user input:focus ~ span::before{
+            width: 100%;
+        }
+
+        form .user_date{
+            position: relative;
+            border-bottom: 2px solid #adadad;
+            margin: 30px 0;
+
+        }
+
+        button{
+            width: 522px;
+            padding: 20px;
+            border: none;
+            background-color: #4E603A;
+            color: #E7E7D7;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="formulario">
+        <h1>Registro de Usuario</h1>
+        <form action="/subbmit" method="post">
+            <div class="user">
+                <input type="text" required>
+                <label for="">Ingrese Su Correo Electrónico</label>
+            </div>
+            <div class ="user">
+                <input type="password" required>
+                <label for="">Ingrese Su Contraseña</label>
+            </div>
+            <div class ="user">
+                <input type="text" required>
+                <label for="">Ingrese Su Nombre</label>
+            </div>
+            <div class ="user">
+                <input type="text" required>
+                <label for="">Ingrese Su Apellido</label>
+            </div>
+            <div class ="user">
+                <input type="text" required>
+                <label for="">Ingrese Su País</label>
+            </div>
+            <div class ="user">
+                <input type="text" required>
+                <label for="">Ingrese Su Género</label>
+            </div>
+            
+            <button>Registrarse</button>
+        </form>
+    </div>
+</body>
+</html>
